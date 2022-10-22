@@ -16,9 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from health_blog.views import index
+from doktorlar.views import doktorgetir
+from health_blog.views import index, deneme
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("",index,name='index')
+    path("",index,name='index'),
+    path('karamel/',deneme,name='deneme'),
+    path('doktorlar/',doktorgetir,name='doktorgetir')
 ]
