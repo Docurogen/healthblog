@@ -17,11 +17,13 @@ from django.contrib import admin
 from django.urls import path
 
 from doktorlar.views import doktorgetir
+from Hastalar.views import hastagetir
 from health_blog.views import index, deneme
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",index,name='index'),
     path('karamel/',deneme,name='deneme'),
-    path('doktorlar/',doktorgetir,name='doktorgetir')
+    path('doktorlar/',doktorgetir,name='doktorgetir'),
+    path('Hastalar/', hastagetir,name='hastagetir')
 ]
